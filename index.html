@@ -1,13 +1,144 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image" href="/public/img/logo_pagina.png"/>
+    <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio_jdr</title>
+    <title>Portfolio Juan Reyes</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main id="ui-layer">
+      <header class="hero">
+        <div class="hero__text">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Juan Reyes Garrido</h1>
+          <p class="subtitle">Ingeniero en Informática · Junior Developer · IT Support</p>
+        </div>
+        <div class="hero__chips">
+          <span class="chip">Laravel</span>
+          <span class="chip">Tailwind</span>
+          <span class="chip">Fullstack</span>
+        </div>
+      </header>
+
+      <section id="playfield" aria-label="Zona interactiva con avatar">
+        <div id="avatar" data-frames="6" data-frame-width="128" data-frame-height="160" aria-label="Avatar pixel art"></div>
+        <div class="hotspot hotspot-about" data-target="#about">Acerca de mí</div>
+        <div class="hotspot hotspot-projects" data-target="#projects">Proyectos</div>
+        <div class="hotspot hotspot-contact" data-target="#contact">Contacto</div>
+          <div id="hud">
+            <div class="hud-left">
+              <h2>JUAN REYES</h2>
+              <div class="hud-tags">
+                <span>LVL JUNIOR DEV</span>
+              </div>
+            </div>
+            <div class="hud-right">
+              <p><strong>Controles</strong></p>
+              <p>← → para moverte</p>
+              <p>Espacio para abrir nodo</p>
+            </div>
+          </div>
+      </section>
+
+        <div id="modal" class="modal">
+          <div class="modal__content">
+            <button class="modal__close" aria-label="Cerrar">×</button>
+            <h3 class="modal-title"></h3>
+            <p class="modal-body"></p>
+          </div>
+        </div>
+
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+          <div class="lightbox__backdrop"></div>
+          <div class="lightbox__content" role="dialog" aria-modal="true" aria-label="Vista de captura">
+            <button class="lightbox__close" aria-label="Cerrar captura">×</button>
+            <img class="lightbox__image" src="" alt="" />
+            <p class="lightbox__caption"></p>
+          </div>
+        </div>
+
+      <section id="about" class="card">
+        <h2>Acerca de mí</h2>
+        <p>Apasionado por la programación y la tecnología. Cuento con experiencia en desarrollo web, soporte TI y gestión de proyectos, aplicando metodologías ágiles que me permiten mantener mis procesos ordenados.
+        Como estudiante de Ingeniería en Informática, complemento mis conocimientos técnicos con certificaciones en análisis de datos y programación. Mi motivación es desarrollar soluciones innovadoras que optimicen procesos y potencien la interacción digital.</p>
+        <br>
+        <p><strong>Stack favorito:</strong> PHP, Laravel, Tailwind, Node.</p>
+      </section>
+
+      <section id="projects" class="card projects">
+        <h2>Proyectos</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="/img/evidencia_portfolio.png" alt="Captura del portfolio 3D" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="pill">Three.js</span>
+                <span class="pill">Frontend</span>
+                <span class="pill">Gamificación</span>
+              </div>
+              <h3>Portfolio Web</h3>
+              <p>Escena Three.js con navegación gamificada, avatar y hotspots conectados a secciones reales del portfolio.</p>
+              <div class="project-links">
+                <a class="project-link capture-link" data-capture="/img/evidencia_portfolio.png" data-caption="Portfolio 3D con avatar y hotspots" href="/img/evidencia_portfolio.png">Ver captura</a>
+                <a class="project-link" href="https://github.com/jdrgarrido/portfolio_jdr" target="_blank" rel="noreferrer noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="/img/evidencia_sigma.png" alt="Dashboard de SIGMA" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="pill">Automatización</span>
+                <span class="pill">Data</span>
+                <span class="pill">Dashboards</span>
+              </div>
+              <h3>SIGMA: Sistema de Gestión y Monitoreo Ambiental</h3>
+              <p>Plataforma para laboratorios ambientales: automatiza procesos, monitorea muestras y genera reportes de eficiencia.</p>
+              <div class="project-links">
+                <a class="project-link capture-link" data-capture="/img/evidencia_sigma.png" data-caption="Dashboard SIGMA de gestión y monitoreo" href="/img/evidencia_sigma.png">Ver captura</a>
+                <a class="project-link" href="https://github.com/jarehbein/surgidero-app" target="_blank" rel="noreferrer noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">
+              <img src="/img/evidencia_surgidero.png" alt="Landing de Surgidero" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="pill">Web</span>
+                <span class="pill">Cliente</span>
+                <span class="pill">UI</span>
+              </div>
+              <h3>Página Web Surgidero</h3>
+              <p>Sitio para Laboratorio Ambiental Surgidero con información de servicios, contacto y optimización de performance.</p>
+              <div class="project-links">
+                <a class="project-link capture-link" data-capture="/img/evidencia_surgidero.png" data-caption="Landing de Surgidero" href="/img/evidencia_surgidero.png">Ver captura</a>
+                <a class="project-link" href="https://www.surgidero.cl" target="_blank" rel="noreferrer noopener">Visitar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card card-contact">
+        <h2>Contacto</h2>
+        <p>Abierto a roles Fullstack, QA y Análisis de Datos. Escríbeme en <a href="mailto:reyesgarridodavid@gmail.com">reyesgarridodavid@gmail.com</a> o conecta en <a href="https://www.linkedin.com/in/juan-reyes-g/" target="_blank" rel="noreferrer noopener">LinkedIn</a>.</p>
+      </section>
+
+      <footer class="footer">
+        <p>Diseñado y desarrollado por Juan Reyes Garrido · 2025</p>
+      </footer>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
